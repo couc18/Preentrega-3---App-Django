@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Añadir información de los libros</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ author_form.as_p }}
+    {{ book_form.as_p }}
+    {{ publisher_form.as_p }}
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}
